@@ -104,7 +104,7 @@
       <p>Ripple (XRP) focuses on enabling fast and low-cost international money transfers. Its main difference from other cryptocurrencies is that it aims to work within the traditional banking system, helping institutions settle cross-border transactions in real time.</p>
     </div>
     <div class="currency">
-      <img src="images\cardano.png" alt="Cardano">
+      <img src="img\cardano.png" alt="Cardano">
       <h3>Cardano</h3>
       <p> Developed with a strong focus on academic research and peer-reviewed technology, Cardano aims to create a secure and scalable ecosystem for smart contracts and dApps.</p>
     </div>
@@ -163,16 +163,27 @@
     <p>&copy; 2024 Cryptohub</p>
   </footer>
   <script>
-    // Ensure smooth scrolling behavior for in-page anchor links
+    // Ensure smooth scrolling behavior for in-page anchor links with offset
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        
+        // Get the target section and its position
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        // Calculate the offset position
+        const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 120; // Subtract 20 pixels
+  
+        // Scroll to the adjusted position
+        window.scrollTo({
+          top: offsetPosition,
           behavior: 'smooth'
         });
       });
     });
   </script>
+  
 
 </body>
 </html>
