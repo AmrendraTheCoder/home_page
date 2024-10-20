@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('./img/hackathon.png') no-repeat center center/cover;
+    background: url('./img/backgroundimg.png') no-repeat center center/cover;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -21,16 +21,16 @@ body {
 }
 
 .maincontainer {
-    background: rgba(59, 59, 59, 0.6);
+    background: rgba(102, 100, 100, 0.6);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
     display: flex;
-    max-width: 80%;
+    max-width: calc(100% - 80px); /* Account for the shared padding */
     width: 80%;
-    height: 80%;
-    margin: 20px;
+    /* height: 80%; */
+    margin: 10px auto 20px; /* Adjusted margin for navbar */
 }
 
 .crypto-container {
@@ -220,16 +220,19 @@ select::placeholder {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    /* padding: 10px 40px; Added shared padding */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 10;
+    width: calc(100%); /* Account for the shared padding on both sides */
+    z-index: 2;
+    padding: 15px 180px 15px 180px;
+    font-size: 14px;
+
 }
 
 .navbar-brand h1 {
-    font-size: 24px;
+    font-size: 18px;
     color: #fff;
     margin-right: 30px; /* Added margin for spacing */
 }
@@ -241,6 +244,7 @@ select::placeholder {
 
 .navbar-menu li {
     margin: 0 15px;
+    font-size: 14px;
 }
 
 .navbar-menu li a {
@@ -260,22 +264,25 @@ select::placeholder {
 }
 
 .signin-button {
-    padding: 8px 8px; /* Increased padding */
-    background: linear-gradient(90deg, #7d5386, #447a72); /* Gradient background */
+    padding: 8px 8px;
+    background: linear-gradient(90deg, #7d5386, #447a72);
     color: #fff;
     font-size: 12.5px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s, transform 0.2s; /* Added transform transition */
-    /* border: 2px solid transparent; Border for hover effect */
+    transition: background 0.3s, transform 0.2s;
 }
 
 .signin-button:hover {
     background: #84dc78;
-    transform: scale(1.05); /* Slightly enlarge button on hover */
-    border: 2px solid #000; /* Add border on hover */
+    transform: scale(1.05);
+    border: 2px solid #000;
 }
 
 .crypto-container{
     color: white;
+}
+
+.shared-padding {
+    padding: 0 40px; /* Adjust as needed for your layout */
 }
