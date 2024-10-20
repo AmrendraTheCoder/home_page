@@ -184,7 +184,7 @@ body {
 
 input::placeholder,
 select::placeholder {
-    color: #fff;
+    color: #000;
     opacity: 0.7; /* Adjust opacity for a lighter shade if desired */
 }
 
@@ -266,9 +266,9 @@ select::placeholder {
 }
 
 .signin-button {
-    padding: 8px 8px;
-    background: linear-gradient(90deg, #7d5386, #447a72);
-    color: #fff;
+    padding: 8px 18px;
+    background: aliceblue;
+    color: #000;
     font-size: 12.5px;
     text-decoration: none;
     border-radius: 5px;
@@ -276,9 +276,10 @@ select::placeholder {
 }
 
 .signin-button:hover {
-    background: #84dc78;
+    background: #78a8dc;
+    color: white;
     transform: scale(1.05);
-    border: 2px solid #000;
+    /* border: 2px solid #000; */
 }
 
 .crypto-container{
