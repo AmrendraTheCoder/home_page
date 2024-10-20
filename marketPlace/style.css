@@ -199,7 +199,7 @@ select::placeholder {
 
 .simulation-result.positive {
     background: rgba(70, 170, 70, 0.3);
-    color: #4caf50;
+    color: hsl(120, 2%, 18%);
     border: 1px solid #4caf50;
 }
 
